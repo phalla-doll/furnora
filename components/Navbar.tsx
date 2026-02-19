@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="w-full py-6 px-6 md:px-12 flex items-center justify-between bg-transparent relative z-50">
       {/* Logo */}
-      <div className="text-3xl font-bold tracking-tight text-furnora-dark">
+      <div className="text-3xl font-bold tracking-tight text-furnora-dark font-cabinet">
         Furnora
       </div>
 
