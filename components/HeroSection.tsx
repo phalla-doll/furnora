@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
       
       {/* Huge Title Section */}
       <div className="relative w-full pt-10 pb-2 md:pb-10 min-h-[auto] md:min-h-[250px] flex flex-col md:block items-center">
-        <h1 className="text-[18vw] md:text-[14rem] leading-[0.8] font-bold text-furnora-dark tracking-tighter text-center select-none pointer-events-none w-full">
+        <h1 className="text-[18vw] md:text-[14rem] leading-[0.8] font-bold font-cabinet text-furnora-dark tracking-tighter text-center select-none pointer-events-none w-full">
           Furnora
         </h1>
         
