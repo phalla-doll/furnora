@@ -17,7 +17,7 @@ const products = [
     price: 89,
     rating: 4,
     isNew: true,
-    image: "https://images.unsplash.com/photo-1507473888900-52e1ad145924?q=80&w=800&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1513506003013-1b6a4286193d?q=80&w=800&auto=format&fit=crop"
   },
   {
     title: "Oak Side Table",
@@ -33,7 +33,7 @@ const products = [
     price: 65,
     rating: 4,
     isNew: false,
-    image: "https://images.unsplash.com/photo-1612196808214-b7e239e5f6b7?q=80&w=800&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1581539250439-c96689b516dd?q=80&w=800&auto=format&fit=crop"
   }
 ];
 
