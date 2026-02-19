@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
+  const parallaxRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (parallaxRef.current) {
+        const scrolled = window.scrollY;
+        // Apply parallax effect: scale 1.1 to cover edges, translate Y based on scroll to create depth
+        parallaxRef.current.style.transform = `scale(1.1) translateY(${scrolled * 0.15}px)`;
+      }
+    };
+
+    // Initial application
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="w-full max-w-[1400px] mx-auto flex flex-col gap-6 md:gap-10 pb-10">
       
@@ -15,11 +33,15 @@ const HeroSection: React.FC = () => {
       {/* Main Image Area - Full Width */}
       <div className="w-full h-[400px] lg:h-[600px] relative">
         <div className="w-full h-full rounded-[2.5rem] overflow-hidden relative group">
-           <img 
-             src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
-             alt="Modern Living Room" 
-             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-           />
+           {/* Wrapper for Hover Scale Effect */}
+           <div className="w-full h-full transition-transform duration-700 group-hover:scale-105">
+             <img 
+               ref={parallaxRef}
+               src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
+               alt="Modern Living Room" 
+               className="w-full h-full object-cover will-change-transform"
+             />
+           </div>
            
            {/* Gradient Overlay for subtle depth */}
            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
