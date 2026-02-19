@@ -43,8 +43,8 @@ const Features: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
         {features.map((feature, idx) => (
           <div key={idx} className="group flex flex-col items-start relative pt-8 border-t border-gray-200 transition-colors duration-500 hover:border-furnora-orange">
-            {/* Numbering */}
-            <span className="absolute top-[-14px] right-0 text-gray-300 font-cabinet font-bold text-xl group-hover:text-furnora-orange transition-colors">
+            {/* Numbering - Background matches body color to create a 'cut' effect on the border */}
+            <span className="absolute top-[-16px] right-0 bg-[#F8F9FA] pl-4 text-gray-300 font-cabinet font-bold text-xl group-hover:text-furnora-orange transition-colors">
               0{idx + 1}
             </span>
 
