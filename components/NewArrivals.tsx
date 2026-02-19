@@ -9,7 +9,7 @@ const products = [
     price: 189,
     rating: 5,
     isNew: true,
-    image: "https://images.unsplash.com/photo-1567538096630-e0c55bd94611?q=80&w=800&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=800&auto=format&fit=crop"
   },
   {
     title: "Minimalist Lamp",
@@ -17,7 +17,7 @@ const products = [
     price: 89,
     rating: 4,
     isNew: true,
-    image: "https://images.unsplash.com/photo-1507473888900-52e1ad145924?q=80&w=800&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1513506003013-d531632103f7?q=80&w=800&auto=format&fit=crop"
   },
   {
     title: "Oak Side Table",

@@ -14,7 +14,7 @@ const ListingCard: React.FC<ListingCardProps> = ({ image, title, category, price
   return (
     <div className="group flex flex-col gap-4">
       {/* Image Container */}
-      <div className="relative w-full aspect-[4/5] bg-white rounded-[2rem] overflow-hidden shadow-sm group-hover:shadow-md transition-all duration-300">
+      <div className="relative w-full aspect-[4/5] bg-gray-100 rounded-[2rem] overflow-hidden shadow-sm group-hover:shadow-md transition-all duration-300">
         
         {/* Badges */}
         {isNew && (
@@ -29,13 +29,11 @@ const ListingCard: React.FC<ListingCardProps> = ({ image, title, category, price
         </button>
 
         {/* Image */}
-        <div className="w-full h-full flex items-center justify-center p-8 bg-gray-50">
-           <img 
-             src={image} 
-             alt={title} 
-             className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
-           />
-        </div>
+        <img 
+           src={image} 
+           alt={title} 
+           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
       </div>
 
       {/* Details */}
