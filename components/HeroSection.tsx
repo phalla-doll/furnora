@@ -10,13 +10,6 @@ const HeroSection: React.FC = () => {
         <h1 className="text-[18vw] md:text-[14rem] leading-[0.8] font-bold font-cabinet text-furnora-dark tracking-tighter text-center select-none pointer-events-none w-full">
           Furnora
         </h1>
-        
-        {/* Floating Glass Card */}
-        <div className="relative mt-8 md:mt-0 md:absolute md:right-4 lg:right-12 md:top-1/2 md:transform md:-translate-y-1/2 glass-panel p-6 md:p-8 rounded-3xl max-w-[280px] md:max-w-sm shadow-sm backdrop-blur-xl z-20 mx-auto">
-          <p className="text-furnora-dark text-lg md:text-xl font-medium leading-relaxed">
-            Modern homes deserve furniture that speaks the language of simplicity.
-          </p>
-        </div>
       </div>
 
       {/* Main Image Area - Full Width */}
@@ -42,6 +35,13 @@ const HeroSection: React.FC = () => {
                <span className="text-sm font-bold text-furnora-dark">Check</span>
                <span className="text-xs text-gray-500 font-medium">Reviews</span>
              </div>
+           </div>
+
+           {/* Floating Glass Card - Moved to overlay image */}
+           <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 glass-panel p-6 md:p-8 rounded-3xl max-w-[280px] md:max-w-sm shadow-sm backdrop-blur-xl z-20 bg-white/60">
+             <p className="text-furnora-dark text-lg md:text-xl font-medium leading-relaxed">
+               Modern homes deserve furniture that speaks the language of simplicity.
+             </p>
            </div>
         </div>
       </div>
