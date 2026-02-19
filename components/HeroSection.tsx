@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
            />
            
            {/* Gradient Overlay for subtle depth */}
-           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
+           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
 
            {/* Reviews Badge Floating */}
            <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-sm p-2 pr-5 rounded-full flex items-center gap-3 shadow-lg transition-transform hover:scale-105 cursor-pointer z-10">
@@ -37,23 +37,23 @@ const HeroSection: React.FC = () => {
              </div>
            </div>
 
-           {/* Floating Glass Card - Moved to overlay image */}
+           {/* Floating Glass Card - Overlay Left */}
            <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 glass-panel p-6 md:p-8 rounded-3xl max-w-[280px] md:max-w-sm shadow-sm backdrop-blur-xl z-20 bg-white/60">
              <p className="text-furnora-dark text-lg md:text-xl font-medium leading-relaxed">
                Modern homes deserve furniture that speaks the language of simplicity.
              </p>
            </div>
-        </div>
-      </div>
 
-      {/* Bottom CTA Button Area */}
-      <div className="w-full flex justify-end mt-4 lg:mt-[-100px] lg:relative lg:z-10 lg:pr-12 pointer-events-none">
-        <button className="pointer-events-auto bg-furnora-orange text-white text-lg font-semibold py-4 px-5 pr-3 rounded-full flex items-center gap-4 shadow-xl hover:shadow-2xl hover:bg-orange-600 transition-all transform hover:-translate-y-1">
-          <span className="pl-4">Shop Now</span>
-          <div className="bg-white text-furnora-orange w-10 h-10 rounded-full flex items-center justify-center">
-            <ArrowUpRight size={24} />
-          </div>
-        </button>
+           {/* CTA Button - Enhanced Position (Overlay Right) */}
+           <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 z-30">
+            <button className="bg-furnora-orange text-white text-lg font-semibold py-3 pl-6 pr-3 md:py-4 md:pl-8 md:pr-4 rounded-full flex items-center gap-4 shadow-xl hover:shadow-2xl hover:bg-orange-600 transition-all transform hover:-translate-y-1 group/btn">
+              <span>Shop Now</span>
+              <div className="bg-white text-furnora-orange w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center group-hover/btn:rotate-45 transition-transform duration-300">
+                <ArrowUpRight size={24} />
+              </div>
+            </button>
+           </div>
+        </div>
       </div>
 
     </div>
