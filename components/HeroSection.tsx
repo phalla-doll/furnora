@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, Star } from 'lucide-react';
-import ProductCard from './ProductCard';
+import { ArrowUpRight } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   return (
@@ -20,66 +19,35 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Grid Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[600px]">
-        
-        {/* Left Large Image Area */}
-        <div className="lg:col-span-8 relative h-[400px] lg:h-full w-full">
-          <div className="w-full h-full rounded-[2.5rem] overflow-hidden relative group">
-             <img 
-               src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
-               alt="Modern Living Room" 
-               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-             />
-             
-             {/* Gradient Overlay for subtle depth */}
-             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
+      {/* Main Image Area - Full Width */}
+      <div className="w-full h-[400px] lg:h-[600px] relative">
+        <div className="w-full h-full rounded-[2.5rem] overflow-hidden relative group">
+           <img 
+             src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
+             alt="Modern Living Room" 
+             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+           />
+           
+           {/* Gradient Overlay for subtle depth */}
+           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
 
-             {/* Reviews Badge Floating */}
-             <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-sm p-2 pr-5 rounded-full flex items-center gap-3 shadow-lg transition-transform hover:scale-105 cursor-pointer z-10">
-               <div className="flex -space-x-3">
-                 <img src="https://i.pravatar.cc/100?img=1" alt="User" className="w-10 h-10 rounded-full border-2 border-white" />
-                 <img src="https://i.pravatar.cc/100?img=5" alt="User" className="w-10 h-10 rounded-full border-2 border-white" />
-                 <img src="https://i.pravatar.cc/100?img=8" alt="User" className="w-10 h-10 rounded-full border-2 border-white" />
-               </div>
-               <div className="flex flex-col">
-                 <span className="text-sm font-bold text-furnora-dark">Check</span>
-                 <span className="text-xs text-gray-500 font-medium">Reviews</span>
-               </div>
+           {/* Reviews Badge Floating */}
+           <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-sm p-2 pr-5 rounded-full flex items-center gap-3 shadow-lg transition-transform hover:scale-105 cursor-pointer z-10">
+             <div className="flex -space-x-3">
+               <img src="https://i.pravatar.cc/100?img=1" alt="User" className="w-10 h-10 rounded-full border-2 border-white" />
+               <img src="https://i.pravatar.cc/100?img=5" alt="User" className="w-10 h-10 rounded-full border-2 border-white" />
+               <img src="https://i.pravatar.cc/100?img=8" alt="User" className="w-10 h-10 rounded-full border-2 border-white" />
              </div>
-          </div>
-        </div>
-
-        {/* Right Product Column */}
-        <div className="lg:col-span-4 flex flex-col gap-6 h-full">
-          
-          {/* Top Product Card */}
-          <div className="flex-1 bg-white rounded-[2.5rem] p-6 shadow-sm hover:shadow-md transition-shadow">
-            <ProductCard 
-              image="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=600&auto=format&fit=crop"
-              title="Twotone chair"
-              price={120.00}
-              colors={['#4ADE80', '#A16207', '#FACC15', '#000000']}
-              rating={5}
-            />
-          </div>
-
-          {/* Bottom Product Card */}
-          <div className="flex-1 bg-white rounded-[2.5rem] p-6 shadow-sm hover:shadow-md transition-shadow">
-             <ProductCard 
-              image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=600&auto=format&fit=crop"
-              title="Leather chair"
-              price={150.00}
-              colors={['#4ADE80', '#A16207', '#FACC15', '#000000']}
-              rating={5}
-            />
-          </div>
-
+             <div className="flex flex-col">
+               <span className="text-sm font-bold text-furnora-dark">Check</span>
+               <span className="text-xs text-gray-500 font-medium">Reviews</span>
+             </div>
+           </div>
         </div>
       </div>
 
       {/* Bottom CTA Button Area */}
-      <div className="w-full flex justify-end mt-4 lg:mt-[-80px] lg:relative lg:z-10 lg:pr-[34%] pointer-events-none">
+      <div className="w-full flex justify-end mt-4 lg:mt-[-100px] lg:relative lg:z-10 lg:pr-12 pointer-events-none">
         <button className="pointer-events-auto bg-furnora-orange text-white text-lg font-semibold py-4 px-5 pr-3 rounded-full flex items-center gap-4 shadow-xl hover:shadow-2xl hover:bg-orange-600 transition-all transform hover:-translate-y-1">
           <span className="pl-4">Shop Now</span>
           <div className="bg-white text-furnora-orange w-10 h-10 rounded-full flex items-center justify-center">
